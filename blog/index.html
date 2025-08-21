@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\(', '\)']],
+                displayMath: [['$$', '$$'], ['\[', '\]']]
+            },
+            chtml: {
+                scale: 1.2
+            }
+        };
+    </script>
+    <link rel="icon" href=".\images\icon.png">
+    <link rel="stylesheet" href=".\CSS\main.css">
+    <title>UniD - 我的小站</title>
+</head>
+<body>
+    <!-- 页面加载动画 -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader"></div>
+    </div>
+    <!-- 阅读进度条 -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <div class="announcement" id="announcement">
+        <span>这是一段测试文本，你可以点击右侧“×”关闭它</span>
+        <button class="close-btn" onclick="closeAnnouncement()"><i class="fa fa-close"></i></button>
+    </div>
+    <!-- 导航栏 -->
+    <nav id="navbar" class="fade-in">
+        <div class="nav-container">
+            <a href="#" class="logo">UniD</a>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#">主站</a></li>
+                <li><a href="#">归档</a></li>
+                <li><a href="#">分类</a></li>
+                <li><a href="#">关于</a></li>
+                <li><button class="theme-toggle" id="themeToggle">🌚</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <div class="container">
+        <!-- 文章展示区 -->
+        <main>
+            <article class="article fade-in delay-4">
+                <h2><a href=".\about.html" target="_blank">About Me</a></h2>
+                <div class="article-meta">
+                    发布于 2025年8月7日 · 分类：<a href="#">随笔</a>
+                </div>
+                <div class="article-content">
+                    <p>我的洛谷 UID \(a\) 满足:$$\sum_{i=0}^{6} a_i \times 10^i \times \log(i+1) \times (i+1)!$$</p>
+                    <p>更多见：<a href="https://www.cnblogs.com/iamoier/articles/19012695" target="_blank" class="art-link">博客园</a></p>
+                    <p>或者：<a href=".\about.html" target="_blank" class="art-link">Click Me</a></p>
+                </div>
+                <a href="#" class="read-more">阅读全文</a>
+            </article>
+
+            <article class="article fade-in delay-4">
+                <h2><a href="#">洛谷P13752 【MX-X17-T1】Walk,Walk,Walk 题解</a></h2>
+                <div class="article-meta">
+                    发布于 2025年8月18日 · 分类：<a href="#">Coding</a>
+                </div>
+                <div class="article-content">
+                    <p>见：<a href="https://www.luogu.com.cn/article/ttpvudsv" target="_blank" class="art-link">洛谷博客</a></p>
+                </div>
+                <a href="#" class="read-more">阅读全文</a>
+            </article>
+
+
+        </main>
+
+        <!-- 侧边栏 -->
+        <aside class="sidebar">
+            <!-- 关于我 -->
+            <div class="sidebar-section about-me fade-in delay-2">
+                <img src="https://cdn.luogu.com.cn/upload/usericon/1456696.png" class="avatar">
+                <h3 class="author-name"><a href="https://www.luogu.com.cn/user/1456696" class="author-name" style="text-decoration: none;" target="_blank">nebula_walk</a></h3>
+                <p class="author-bio">九万里风鹏正举。风休住，蓬州吹取三山去！</p>
+                <p class="author-bio">最后在线时间2025.8.18 19:21</p>
+                <div class="social-links">
+                    <a href=".\about.html" title="详细" target="_blank">关于我</a>
+                    <a href="https://www.luogu.com.cn/user/1456696" title="洛谷" target="_blank">洛谷</a>
+                    <a href="#" title="405578615@qq.com" target="_blank">QQ</a>
+                </div>
+            </div>
+
+
+            <!-- 友情链接 -->
+            <div class="sidebar-section fade-in delay-5">
+                <h3 class="sidebar-title">友情链接</h3>
+                <ul class="links">
+                    <li><a href="#">暂无友联，快去申请坑位</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section fade-in delay-5">
+                <h3 class="sidebar-title">更新日志</h3>
+                <div class="article-content">
+                    <p>8/8：修复了CSS样式冲突。</p> 
+                    <p>8/12：markdown的性价比太低，已删除。</p>
+                    <p>8/13：更新Latex功能。</p> 
+                    <p>8/15：重构网站，修复后端。</p> 
+                    <p>8/16：把小站部署到github。</p>  
+                    <p>8/18：优化前端</p> 
+                    <p>8/21：新增自我介绍页，新增底部通知栏</p>   
+                </div>
+            </div>
+
+        </aside>
+    </div>
+
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top" id="backToTop">Top</button>
+
+    <!-- 页脚 -->
+    <footer class="fade-in delay-6">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="#">首页</a>
+                <a href="#">归档</a>
+                <a href="#">分类</a>
+                <a href="#">关于</a>
+            </div>
+            <p>&copy; 2025 UniD</p>
+        </div>
+    </footer>
+
+    <script src=".\JS\main.js">
+    
+    </script>
+</body>
+</html>
